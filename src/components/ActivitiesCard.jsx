@@ -4,8 +4,8 @@ import { useState } from 'react'
 const ActivitiesCard = () => {
     const [active, setActive] = useState("MON")
     return (
-        <div className='w-full h-[200px]  border border-white'>
-            <div className='m-5 border border-white h-[150px] rounded-[12px] bg-[#333333]'>
+        <div className='w-full h-[200px]  '>
+            <div className='m-5 border  h-[150px] rounded-[12px] bg-[#333333]'>
                 <div className='w-full mt-4 ml-3 flex gap-3'>
                     <div className='bg-[#D3F462] h-[30px] w-[20%] rounded-[8px] text-[#333333] font-Montserrat flex justify-center items-center text-[12px] font-semibold'>
                         Day Plan
@@ -14,7 +14,7 @@ const ActivitiesCard = () => {
                         14 Activities
                     </div>
                 </div>
-                <div className='border flex border-white mt-5 mx-3 h-[70px] gap-3'>
+                <div className=' flex  mt-5 mx-3 h-[70px] gap-3'>
                     {active === "MON" ?
                         <div className="cursor-pointer flex rounded-xl border border-[#D8F15C] overflow-hidden w-[80px] h-[60px] text-white text-center text-xs font-semibold font-Montserrat"
                             onClick={() => setActive("MON")}
