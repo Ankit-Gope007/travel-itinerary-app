@@ -3,6 +3,7 @@ import Greetings from './components/Greetings'
 import NewTripCard from './components/NewTripCard'
 import FlightDetailsCard from './components/FlightDetailsCard'
 import AcommodationSection from './components/AcommodationSection'
+import ActivitiesCard from './components/ActivitiesCard'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         </h1>
         <a className='text-[#D1F462] underline mr-5' href="/">See all</a>
       </div>
+      <ActivitiesCard />
     </div>
   )
 }
