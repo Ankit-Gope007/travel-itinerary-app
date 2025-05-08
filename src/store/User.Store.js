@@ -6,7 +6,7 @@ const useUserStore = create(
         (set) => ({
             username: null,
             setUsername: (username) => set({ username }),
-            theme: "light",
+            theme:"dark",
             setTheme: (theme) => set({ theme }),
         }),
         {
@@ -16,4 +16,4 @@ const useUserStore = create(
     )
 )
 
-export default useUserStore;
+export default useUserStore

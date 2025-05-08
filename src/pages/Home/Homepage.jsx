@@ -67,7 +67,7 @@ const App = () => {
         </div>
       </div>
       <ActivitesSection />
-      <Footer />
+      
     </div>
   )
 }

@@ -34,7 +34,9 @@ const Footer = () => {
       ? "bg-[#1D1F24]" : "bg-white"}`}>
       <div className="flex w-full h-full items-center justify-around">
         <div onClick={() => setActiveIcon('home')} className="cursor-pointer">
+        <Link to="/" onClick={() => setActiveIcon('add')}>
           <CiHome className={iconClasses('home')} />
+        </Link>
         </div>
 
         <div onClick={() => setActiveIcon('search')} className="cursor-pointer">
@@ -44,7 +46,7 @@ const Footer = () => {
         <div onClick={() => setActiveIcon('add')} className="cursor-pointer">
           <Link to="/add" onClick={() => setActiveIcon('add')}>
             <IoMdAdd
-              className={`h-[40px] w-[50px] ${theme === "dark" ? "text-[#D3F462]" : "text-[#313DDF]"} }`}
+              className={`h-[40px] w-[50px] ${iconClasses('add')} ${theme === "dark" ? "text-[#D3F462]" : "text-[#313DDF]"} }`}
             />
           </Link>
         </div>
