@@ -1,10 +1,14 @@
 import React from 'react'
 import { GiConfirmed } from "react-icons/gi";
 import { RxCountdownTimer } from "react-icons/rx";
+import { useEffect,useRef} from 'react';
 
-const AcommodationCard = ({image,heading,checkIn,checkOut,confirm}) => {
+
+const AcommodationCard = ({image,heading,checkIn,checkOut,confirm,theme}) => {
+  
+
   return (
-    <div className="min-w-[250px] mt-5 ml-5 rounded-xl bg-[#4D4D4D]  text-white ">
+    <div className={`min-w-[250px]  mt-5 ml-5 rounded-xl  ${theme=="dark"?"bg-[#4D4D4D] text-white":"border border-slate-400"}   `}>
       <img src={image} className="rounded-lg mx-0 mt-0 w-full max-h-[150px] object-cover" />
       <div className='flex flex-col items-start justify-items-start ml-4 mt-5'>
       <h2 className="font-Poppins font-semibold text-[14px]">{heading}</h2>
