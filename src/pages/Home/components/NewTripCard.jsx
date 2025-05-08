@@ -1,5 +1,5 @@
 import React from 'react'
-import tokyoImage from "../assets/images/tokyo.svg"
+import tokyoImage from "../../../assets/images/tokyo.svg"
 
 const NewTripCard = () => {
   return (

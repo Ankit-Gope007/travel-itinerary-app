@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import AcommodationCard from './AcommodationCard'
-import acommodationImage from "../assets/images/image.svg"
-import accomodationImage2 from "../assets/images/image2.svg"
+import acommodationImage from "../../../../assets/images/image.svg"
+import accomodationImage2 from "../../../../assets/images/image2.svg"
 
 const AcommodationSection = () => {
     const [images, setImages] = useState()

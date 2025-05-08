@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ActivitiesCard = () => {
+const ActivitiesPlanner = () => {
     const [active, setActive] = useState("MON")
     return (
         <div className='w-full h-[200px]  '>
@@ -158,4 +158,4 @@ const ActivitiesCard = () => {
     )
 }
 
-export default ActivitiesCard
+export default ActivitiesPlanner

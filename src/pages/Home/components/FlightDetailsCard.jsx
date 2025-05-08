@@ -1,5 +1,5 @@
 import React from 'react'
-import flightImage from "../assets/images/FlightDetails.svg"
+import flightImage from "../../../assets/images/FlightDetails.svg"
 
 const FlightDetailsCard = () => {
   return (
