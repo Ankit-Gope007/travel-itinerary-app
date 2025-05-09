@@ -56,7 +56,9 @@ const Footer = () => {
         </div>
 
         <div onClick={() => setActiveIcon('person')} className="cursor-pointer">
+        <Link to="/profile" onClick={() => setActiveIcon('person')}>
           <GoPerson className={iconClasses('person')} />
+        </Link>
         </div>
       </div>
     </div>

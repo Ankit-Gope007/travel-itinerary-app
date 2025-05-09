@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Home/Homepage';
 import Add from './pages/AddTrip/Add';
 import Footer from './pages/Home/components/Footer';
+import ProfilePage from './pages/Profile/ProfilePage';
 
 
 const App = () => {
@@ -12,6 +13,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/add" element={<Add />} />
+        <Route path="/profile" element={<ProfilePage />} />
+     
       </Routes>
       <Footer />
     </Router>

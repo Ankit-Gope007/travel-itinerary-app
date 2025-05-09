@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import useUserStore from '../../../store/User.Store'
 
 const Greetings = () => {
-  const {theme} = useUserStore()
+  const {theme,username} = useUserStore()
 
   useEffect(() => {
     const heading = document.getElementById("heading")
@@ -23,14 +23,14 @@ const Greetings = () => {
     <div className='flex justify-between items-center' >
         <div id="heading" className='mt-5 ml-5 text-white '>
             <div className='font-Poppins font-extrabold text-[24px]'>
-            Hello Chhavi!
+            Hello {username}!
             </div>
             <div className='font-Montserrat font-medium text-[16px]'>
             Ready for the trip?
             </div>
         </div>
         <div className='h-[38px] w-[38px] rounded-full mr-5 mt-5 flex items-center justify-center bg-[#FF7339] text-white'>
-            C
+            {username.charAt(0).toUpperCase()}
         </div>
     </div>
   )
