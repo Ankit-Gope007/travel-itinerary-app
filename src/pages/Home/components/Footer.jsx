@@ -40,7 +40,9 @@ const Footer = () => {
         </div>
 
         <div onClick={() => setActiveIcon('search')} className="cursor-pointer">
+        <Link to="/search" onClick={() => setActiveIcon('search')}>
           <CiSearch className={iconClasses('search')} />
+        </Link>
         </div>
 
         <div onClick={() => setActiveIcon('add')} className="cursor-pointer">

@@ -5,6 +5,7 @@ import HomePage from './pages/Home/Homepage';
 import Add from './pages/AddTrip/Add';
 import Footer from './pages/Home/components/Footer';
 import ProfilePage from './pages/Profile/ProfilePage';
+import WeatherSearch from './pages/Search/WeatherSearch';
 
 
 const App = () => {
@@ -14,7 +15,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/add" element={<Add />} />
         <Route path="/profile" element={<ProfilePage />} />
-     
+        <Route path="/search" element={<WeatherSearch />} />
       </Routes>
       <Footer />
     </Router>
