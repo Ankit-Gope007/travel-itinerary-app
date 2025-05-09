@@ -29,6 +29,9 @@ This app lets users plan trips, search destinations, view weather data, manage p
 - **OpenWeatherMap API**
 
 ---
+## 🥳 Live Link of the Website
+- https://travel-itinerary-app-zywj.vercel.app/
+---
 
 ## 🔧 Getting Started
 
