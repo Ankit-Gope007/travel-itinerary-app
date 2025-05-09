@@ -8,6 +8,8 @@ const useUserStore = create(
             setUsername: (username) => set({ username }),
             theme:"dark",
             setTheme: (theme) => set({ theme }),
+            activeIcons: "home",
+            setActiveIcons: (icons) => set({ activeIcons: icons }),
         }),
         {
             name: "user-storage",

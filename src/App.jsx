@@ -6,6 +6,7 @@ import Add from './pages/AddTrip/Add';
 import Footer from './pages/Home/components/Footer';
 import ProfilePage from './pages/Profile/ProfilePage';
 import WeatherSearch from './pages/Search/WeatherSearch';
+import LikePage from './pages/Like/LikePage';
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/add" element={<Add />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/search" element={<WeatherSearch />} />
+        <Route path="/like" element={<LikePage />} />
       </Routes>
       <Footer />
     </Router>
