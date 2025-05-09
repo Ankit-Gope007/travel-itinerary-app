@@ -6,7 +6,7 @@ const useUserStore = create(
         (set) => ({
             username: null,
             setUsername: (username) => set({ username }),
-            theme:"dark",
+            theme:"light",
             setTheme: (theme) => set({ theme }),
         }),
         {

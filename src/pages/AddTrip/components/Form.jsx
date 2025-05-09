@@ -9,7 +9,7 @@ const Form = (theme) => {
     const [selectedGroup, setSelectedGroup] = useState("");
     
     useEffect(() => {
-        console.log("Theme changed:", theme);
+        console.log("Theme changed:", theme.theme,"Type of theme:", typeof theme.theme);
     }, [theme]);
 
     const groupOptions = [
@@ -74,16 +74,16 @@ const Form = (theme) => {
         //     <button className='w-full active:bg-[#343cae] cursor-pointer h-[50px] font-Montserrat text-[16px] rounded-[8px]  bg-[#3643FB] '>Continue</button>
         //   </div>
         // </div>
-            <div className={`space-y-6 font-Montserrat mx-5 mt-[50px] ${theme === 'dark' ? 'text-white ' : 'text-black'}`}>
+            <div className={`space-y-6 font-Montserrat mx-5 mt-[50px] ${theme.theme === 'dark' ? 'text-white ' : 'text-black'}`}>
           {/* Destination */}
-          <div className={`${theme ==="dark" ? 'text-white' : 'text-black'}`}>
-            <label className={`block mb-2 text-sm font-Poppins text-[18px] font-medium  ${theme ==="dark" ? 'text-white' : 'text-black'}`}>Where would you like to go?</label>
-            <div className={`flex items-center px-4 py-3 rounded-lg gap-2 ${theme === 'dark' ? 'bg-[#2D2D2D]' : 'bg-[#F1F2F4]'}`}>
+          <div className={`${theme.theme ==="dark" ? 'text-white' : 'text-black'}`}>
+            <label className={`block mb-2 text-sm font-Poppins text-[18px] font-medium  ${theme.theme ==="dark" ? 'text-white' : 'text-black'}`}>Where would you like to go?</label>
+            <div className={`flex items-center px-4 py-3 rounded-lg gap-2 ${theme.theme === 'dark' ? 'bg-[#2D2D2D]' : 'bg-transparent border border-slate-400'}`}>
               <CiLocationOn className="text-lg" />
               <input
                 type="text"
                 placeholder="Enter Destination"
-                className={`outline-none w-full text-sm placeholder-gray-400 ${theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black'}`}
+                className={`outline-none w-full text-sm placeholder-gray-400 ${theme.theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black'}`}
               />
             </div>
           </div>
@@ -91,10 +91,10 @@ const Form = (theme) => {
           {/* Duration */}
           <div>
             <label className="block mb-2 text-sm font-Poppins text-[18px] font-medium">How long will you stay?</label>
-            <div className={`flex items-center px-4 py-3 rounded-lg gap-2 ${theme === 'dark' ? 'bg-[#2D2D2D]' : 'bg-[#F1F2F4]'}`}>
+            <div className={`flex items-center px-4 py-3 rounded-lg gap-2 ${theme.theme === 'dark' ? 'bg-[#2D2D2D]' : 'bg-transparent border border-slate-400'}`}>
               <CiCalendar className="text-lg" />
               <select
-                className={`outline-none w-full text-sm appearance-none ${theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black'}`}
+                className={`outline-none w-full text-sm appearance-none ${theme.theme === 'dark' ? 'bg-transparent text-white' : 'bg-transparent text-black'}`}
               >
                 <option value="">Select Duration</option>
                 <option value="3">3 Days</option>
@@ -112,12 +112,12 @@ const Form = (theme) => {
                 <button
                   key={option.label}
                   onClick={() => setSelectedGroup(option.label)}
-                  className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium text-sm transition ${
+                  className={`flex items-center justify-center cursor-pointer gap-2 px-4 py-3 rounded-lg font-medium text-sm transition ${
                     selectedGroup === option.label
                       ? 'bg-[#D3F462] text-black'
-                      : theme === 'dark'
+                      : theme.theme === 'dark'
                       ? 'bg-[#2D2D2D] text-white'
-                      : 'bg-[#F1F2F4] text-black'
+                      : 'bg-transparent border border-slate-400 text-black'
                   }`}
                 >
                   {option.icon}
@@ -135,6 +135,7 @@ const Form = (theme) => {
             </button>
           </div>
         </div>
+     
         
     );
 };
